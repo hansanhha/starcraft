@@ -1,13 +1,13 @@
-package hansanhha.spring.bootcore;
+package hsh.demo.boot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BootcoreApplication {
+public class BootApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(BootcoreApplication.class, args);
+        SpringApplication.run(BootApplication.class, args);
     }
 
 }
