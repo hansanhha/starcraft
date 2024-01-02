@@ -1,0 +1,17 @@
+spring:
+  banner:
+    location: classpath:/banner.txt
+    charset: utf-8
+
+  application:
+    name: hansanhha's-spring-boot-demo
+
+  config:
+    import:
+    - classpath:test.yml
+    - classpath:test2.yml
+    - optional:http://localhost:8081/external-test.yml
+
+
+message:
+  hello: Hello, World!
