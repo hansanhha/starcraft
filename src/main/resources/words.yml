@@ -1,0 +1,17 @@
+modern:
+  word:
+    hat: 모자
+    pants: 바지
+    shoes: 신발
+
+legacy:
+  word:
+    hat: 모자
+    pants: 바지
+    shoes: 신발
+
+external:
+  word:
+    hat: 모자
+    pants: 바지
+    shoes: 신발

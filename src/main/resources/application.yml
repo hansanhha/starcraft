@@ -10,6 +10,7 @@ spring:
     import:
     - classpath:test.yml
     - classpath:test2.yml
+    - classpath:words.yml
     - optional:http://localhost:8081/external-test.yml
 
 
