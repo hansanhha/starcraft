@@ -3,33 +3,29 @@ package hsh.demo.boot.property;
 import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 public class WordDictionaryClient {
 
-    private final ModernWordDictionary modernWordDictionary;
-    private final LegacyWordDictionary legacyWordDictionary;
-    private final ExternalWordDictionary externalWordDictionary;
+    private final List<WordDictionary> wordDictionaries;
 
-    public WordDictionaryClient(ModernWordDictionary modernWordDictionary, LegacyWordDictionary legacyWordDictionary, ExternalWordDictionary externalWordDictionary) {
-        this.modernWordDictionary = modernWordDictionary;
-        this.legacyWordDictionary = legacyWordDictionary;
-        this.externalWordDictionary = externalWordDictionary;
+    public WordDictionaryClient(List<WordDictionary> wordDictionaries) {
+        this.wordDictionaries = wordDictionaries;
     }
 
     @PostConstruct
     public void printWordDictionary() {
-        System.out.println("print modern word dictionary");
-        System.out.println(modernWordDictionary.getAll());
+        System.out.println();
+        System.out.println("===all word dictionaries===");
+        System.out.println("hat, pants, shoes:");
+        wordDictionaries.forEach(dictionary -> System.out.println(dictionary.getAll()));
 
         System.out.println();
-        System.out.println();
-
-        System.out.println("print legacy word dictionary");
-        System.out.println(legacyWordDictionary.getAll());
-
-        System.out.println();
-        System.out.println();
-        System.out.println("print external word dictionary");
-        System.out.println(externalWordDictionary.getAll());
+        System.out.println("===korean word dictionary===");
+        wordDictionaries.stream()
+                .filter(dictionary -> dictionary.isSupported(Language.KOREAN))
+                .findFirst()
+                .ifPresent(dictionary -> System.out.println(dictionary.getAll()));
     }
 }

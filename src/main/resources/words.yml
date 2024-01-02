@@ -1,17 +1,17 @@
-modern:
+korean:
   word:
     hat: 모자
     pants: 바지
     shoes: 신발
 
-legacy:
+japanese:
   word:
-    hat: 모자
-    pants: 바지
-    shoes: 신발
+    hat: 帽子
+    pants: パンツ
+    shoes: 靴
 
-external:
+chinese:
   word:
-    hat: 모자
-    pants: 바지
-    shoes: 신발
+    hat: 帽子
+    pants: 裤子
+    shoes: 鞋

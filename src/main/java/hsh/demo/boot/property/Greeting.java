@@ -1,4 +1,4 @@
-package hsh.demo.boot;
+package hsh.demo.boot.property;
 
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Value;
@@ -27,7 +27,7 @@ public class Greeting {
 
     @PostConstruct
     public void init() {
-        System.out.println();
+        System.out.println("@Value() 바인딩 결과");
         sayHello();
         sayHome();
         sayBye();

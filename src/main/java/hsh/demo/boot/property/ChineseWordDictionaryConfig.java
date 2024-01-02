@@ -5,11 +5,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class ExternalWordDictionaryConfig {
+public class ChineseWordDictionaryConfig {
 
     @Bean(initMethod = "init")
-    @ConfigurationProperties(prefix = "external.word")
-    public ExternalWordDictionary externalWordDictionary() {
-        return new ExternalWordDictionary();
+    @ConfigurationProperties(prefix = "chinese.word")
+    public ChineseWordDictionary externalWordDictionary() {
+        return new ChineseWordDictionary();
     }
 }

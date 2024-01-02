@@ -15,9 +15,9 @@ import java.util.List;
     * @ConstructorBinding : 생성자를 통해 바인딩(불변)
     * Property 검증 가능
  */
-@ConfigurationProperties(prefix = "modern.word")
+@ConfigurationProperties(prefix = "korean.word")
 @Validated
-public class ModernWordDictionary {
+public class KoreanWordDictionary implements WordDictionary {
 
     @NotBlank
     private final String hat;
@@ -31,7 +31,7 @@ public class ModernWordDictionary {
     private List<String> words = new ArrayList<>();
 
     @ConstructorBinding
-    public ModernWordDictionary(String hat, String pants, String shoes) {
+    public KoreanWordDictionary(String hat, String pants, String shoes) {
         this.hat = hat;
         this.pants = pants;
         this.shoes = shoes;
@@ -41,7 +41,21 @@ public class ModernWordDictionary {
         words.add(shoes);
     }
 
+    @Override
+    public String getWord(String word) {
+        return words.stream()
+                .filter(w -> w.equals(word))
+                .findFirst()
+                .orElseThrow(() -> new IllegalArgumentException("해당 단어가 없습니다."));
+    }
+
+    @Override
     public String getAll() {
         return String.join(" ", words);
+    }
+
+    @Override
+    public boolean isSupported(Language language) {
+        return language.equals(Language.KOREAN);
     }
 }
