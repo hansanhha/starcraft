@@ -1,0 +1,11 @@
+protoss:
+  probe:
+    armor: 0
+    shield: 20
+    hp: 20
+    damage: 5
+    attackSpeed: 1.25
+    mineralCost: 50
+    gasCost: 0
+    supplyCost: 1
+    buildTime: 17
