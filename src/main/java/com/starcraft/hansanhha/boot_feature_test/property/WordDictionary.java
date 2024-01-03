@@ -1,4 +1,4 @@
-package hsh.demo.boot.property;
+package com.starcraft.hansanhha.boot_feature_test.property;
 
 // 한영 단어사전 인터페이스
 public interface WordDictionary {

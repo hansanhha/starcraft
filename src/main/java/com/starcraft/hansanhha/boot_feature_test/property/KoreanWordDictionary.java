@@ -1,4 +1,4 @@
-package hsh.demo.boot.property;
+package com.starcraft.hansanhha.boot_feature_test.property;
 
 import jakarta.validation.constraints.NotBlank;
 import org.springframework.boot.context.properties.ConfigurationProperties;

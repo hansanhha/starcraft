@@ -1,4 +1,4 @@
-package hsh.demo.boot.property;
+package com.starcraft.hansanhha.boot_feature_test.property;
 
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Value;
@@ -27,10 +27,10 @@ public class Greeting {
 
     @PostConstruct
     public void init() {
-        System.out.println("@Value() 바인딩 결과");
-        sayHello();
-        sayHome();
-        sayBye();
+//        System.out.println("@Value() 바인딩 결과");
+//        sayHello();
+//        sayHome();
+//        sayBye();
     }
 
     public void sayHello() {

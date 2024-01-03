@@ -1,4 +1,4 @@
-package hsh.demo.boot.property;
+package com.starcraft.hansanhha.boot_feature_test.property;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
