@@ -3,12 +3,11 @@ package com.game.starcraft.core.building;
 import com.game.starcraft.core.resource.Gas;
 import com.game.starcraft.core.resource.Mineral;
 import com.game.starcraft.core.unit.Worker;
+import com.game.starcraft.core.unit.specification.Unit;
 
-public interface Townhall<Race> extends Building<Race> {
+public interface Townhall extends Building {
 
-    Worker<Race> produce();
-
-    void increaseMaxSupply();
+    Worker produce();
 
     void increaseMineral(Mineral mineral);
 

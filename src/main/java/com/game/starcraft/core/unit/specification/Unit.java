@@ -1,11 +1,11 @@
-package com.game.starcraft.core.unit.ability;
+package com.game.starcraft.core.unit.specification;
 
 
 import com.game.starcraft.core.resource.Gas;
 import com.game.starcraft.core.resource.Mineral;
 import com.game.starcraft.core.unit.specification.*;
 
-public interface Unit<Race> {
+public interface Unit {
 
     Hp getHp();
 
@@ -22,4 +22,6 @@ public interface Unit<Race> {
     SupplyCost getSupplyCost();
 
     AttackSpeed getAttackSpeed();
+
+    Coordinate getCoordinate();
 }

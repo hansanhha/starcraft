@@ -7,7 +7,7 @@ import com.game.starcraft.core.resource.Mineral;
 import java.util.function.BiFunction;
 
 @FunctionalInterface
-public interface Buildable<Race> {
+public interface Buildable {
 
-    Building<Race> build(BiFunction<Mineral, Gas, Building<Race>> building);
+    Building build(BiFunction<Mineral, Gas, Building> building);
 }

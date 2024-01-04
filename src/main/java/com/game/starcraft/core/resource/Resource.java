@@ -6,7 +6,4 @@ public interface Resource<T extends Resource<T>> {
 
     Optional<T> mine();
 
-    private void destroy() {
-
-    }
 }

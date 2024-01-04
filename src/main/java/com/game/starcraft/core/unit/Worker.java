@@ -7,36 +7,19 @@ import com.game.starcraft.core.resource.Mineral;
 import com.game.starcraft.core.resource.Resource;
 import com.game.starcraft.core.unit.ability.Buildable;
 import com.game.starcraft.core.unit.ability.Gatherable;
-import com.game.starcraft.core.unit.ability.Unit;
+import com.game.starcraft.core.unit.specification.Unit;
 import com.game.starcraft.core.unit.specification.*;
 import lombok.Setter;
 
 import java.util.Optional;
 
-public abstract class Worker<Race> implements Buildable<Race>, Gatherable, Unit<Race> {
-
-    protected final Hp hp;
-    protected final Armor armor;
-    protected final Damage damage;
-    protected final Mineral mineralCost;
-    protected final Gas gasCost;
-    protected final BuildTime buildTime;
-    protected final SupplyCost supplyCost;
-    protected final AttackSpeed attackSpeed;
+public abstract class Worker implements Buildable, Gatherable {
 
     protected GatherStatus gatherStatus = GatherStatus.STOPPED;
     @Setter
-    protected Townhall<Race> townhall;
+    protected Townhall townhall;
 
-    public Worker(Hp hp, Armor armor, Damage damage, Mineral mineralCost, Gas gasCost, BuildTime buildTime, SupplyCost supplyCost, AttackSpeed attackSpeed, Townhall<Race> townhall) {
-        this.hp = hp;
-        this.armor = armor;
-        this.damage = damage;
-        this.mineralCost = mineralCost;
-        this.gasCost = gasCost;
-        this.buildTime = buildTime;
-        this.supplyCost = supplyCost;
-        this.attackSpeed = attackSpeed;
+    public Worker(Townhall townhall) {
         this.townhall = townhall;
     }
 
@@ -61,47 +44,6 @@ public abstract class Worker<Race> implements Buildable<Race>, Gatherable, Unit<
         } else {
             setGatherStatus(GatherStatus.STOPPED);
         }
-    }
-
-    @Override
-    public Hp getHp() {
-        return this.hp;
-    }
-
-    @Override
-    public Damage getDamage() {
-        return this.damage;
-    }
-
-    @Override
-    public Armor getArmor() {
-        return this.armor;
-    }
-
-
-    @Override
-    public Mineral getMineralCost() {
-        return this.mineralCost;
-    }
-
-    @Override
-    public Gas getGasCost() {
-        return this.gasCost;
-    }
-
-    @Override
-    public BuildTime getBuildTime() {
-        return this.buildTime;
-    }
-
-    @Override
-    public SupplyCost getSupplyCost() {
-        return this.supplyCost;
-    }
-
-    @Override
-    public AttackSpeed getAttackSpeed() {
-        return this.attackSpeed;
     }
 
     @Override

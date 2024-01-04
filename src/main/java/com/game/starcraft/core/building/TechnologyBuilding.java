@@ -1,7 +1,9 @@
 package com.game.starcraft.core.building;
 
-@FunctionalInterface
-public interface TechnologyBuilding<Race> extends Building<Race> {
+public interface TechnologyBuilding extends Building {
 
+    /*
+        * 업그레이드 시 게임 전체 적용
+     */
     void upgrade();
 }

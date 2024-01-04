@@ -1,7 +1,9 @@
 package com.game.starcraft.core.building;
 
-@FunctionalInterface
-public interface DefenseBuilding<Race> extends Building<Race> {
+public interface DefenseBuilding extends Building {
 
-    <T> int attack(T target);
+    /*
+        * 공격할 수 없는 건물은 0을 반환하거나 메서드 호출 전 가능 여부 판단 필요
+     */
+    <T> void attack(T target);
 }

@@ -10,6 +10,5 @@ spring:
     import:
       - classpath:starcraft/starcraft-protoss.yml
 
-
-message:
-  hello: Hello, World!
+logging:
+  config:
