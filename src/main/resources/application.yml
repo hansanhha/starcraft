@@ -1,17 +1,14 @@
 spring:
   banner:
-    location: classpath:/banner.txt
+    location: classpath:/banner/banner.txt
     charset: utf-8
 
   application:
-    name: hansanhha's-spring-boot-demo
+    name: startcraft
 
   config:
     import:
-    - classpath:test.yml
-    - classpath:test2.yml
-    - classpath:words.yml
-    - optional:http://localhost:8081/external-test.yml
+      - classpath:starcraft/starcraft-protoss.yml
 
 
 message:
